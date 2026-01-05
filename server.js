@@ -21,7 +21,7 @@ app.use(express.static('public'));
 // ========== إعدادات قاعدة البيانات ==========
 // ⚠️ استبدل هذا الرابط بـ Connection String الخاص بك من MongoDB Atlas
 const MONGODB_URI = "mongodb+srv://kirkukmustafa10_db_user:ne0E3tyyHzNk8JNe@cluster0.lri2lhy.mongodb.net/quizdb?retryWrites=true&w=majority&appName=Cluster0";
-
+                 //   const MONGODB_URI = "mongodb+srv://kirkukmustafa10_db_user:<db_password>@cluster0.lri2lhy.mongodb.net/?appName=Cluster0";
 mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
