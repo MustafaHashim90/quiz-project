@@ -27,8 +27,8 @@ let studentInfo = {
 const QUESTIONS_SHEET_URL = 'https://script.google.com/macros/s/AKfycbwQpiwiWKg-qZ93Oj1mRNeLW-S7EJ74loleSAk0BY4Q7qKW6iG5SOhM3bqzlpZ2ZOJKrw/exec';
 
 // 🔗 رابط حفظ النتائج في SQL Server (Backend)
-const SAVE_RESULT_API = 'http://localhost:3000/api/save-result';
-
+//const SAVE_RESULT_API = 'http://localhost:3000/api/save-result';
+const SAVE_RESULT_API = 'https://quiz-project.up.railway.app/api/save-result';
 // ==================== تهيئة النظام عند تحميل الصفحة ====================
 document.addEventListener('DOMContentLoaded', () => {
   // ربط أحداث النماذج والأزرار
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function handleLogin(e) {
 
 // التحقق من حالة النظام قبل بدء المسابقة
-fetch('http://localhost:3000/api/quiz-status')
+fetch('https://quiz-project.up.railway.app/api/save-result')
   .then(res => res.json())
   .then(data => {
     if (!data.active) {
