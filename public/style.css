@@ -1,0 +1,47 @@
+/* استخدام خط Cairo للعربية */
+body {
+  font-family: 'Cairo', Tahoma, sans-serif !important;
+  background-color: #f8f9fa;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cairo', Tahoma, sans-serif;
+}
+
+.card {
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.option-btn {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 12px;
+  border: 1px solid #ced4da;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  text-align: right;
+  font-family: 'Cairo', Tahoma, sans-serif;
+  font-size: 1.05rem;
+  transition: all 0.2s;
+}
+
+.option-btn:hover {
+  background-color: #e9ecef;
+}
+
+.option-btn.selected {
+  background-color: #d1ecf1;
+  border-color: #0dcaf0;
+  font-weight: bold;
+}
+
+#timer {
+  font-size: 1.15rem;
+}
+
+footer {
+  font-weight: bold;
+  color: #2c3e50;
+  font-size: 1.1rem;
+}

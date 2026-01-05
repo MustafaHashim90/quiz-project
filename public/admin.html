@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>لوحة تحكم المسؤول - المسابقة</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Cairo', Tahoma, sans-serif; }
+    .card { border-radius: 12px; }
+    .status-active { color: #198754; font-weight: bold; }
+    .status-inactive { color: #dc3545; font-weight: bold; }
+  </style>
+</head>
+<body class="bg-light">
+  <div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2>لوحة تحكم المسؤول</h2>
+      <a href="/" class="btn btn-outline-secondary">العودة للمسابقة</a>
+    </div>
+
+    <!-- حالة النظام -->
+    <div class="card p-3 mb-4">
+      <div class="d-flex justify-content-between align-items-center">
+        <h5 class="mb-0">حالة المسابقة:</h5>
+        <div>
+          <span id="status-text" class="status-active">مفتوحة</span>
+          <button id="toggle-btn" class="btn btn-primary ms-2">إيقاف</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- أزرار التحكم -->
+    <div class="d-flex gap-2 mb-4">
+      <button id="refresh-btn" class="btn btn-outline-primary">تحديث النتائج</button>
+      <button id="export-csv-btn" class="btn btn-success">تصدير إلى CSV</button>
+    </div>
+
+    <!-- جدول النتائج -->
+    <div class="card p-3">
+      <h5>نتائج الطلاب (<span id="results-count">0</span>)</h5>
+      <div class="table-responsive">
+        <table class="table table-hover" id="results-table">
+          <thead class="table-light">
+            <tr>
+              <th>#</th>
+              <th>الاسم الكامل</th>
+              <th>القسم</th>
+              <th>المرحلة</th>
+              <th>المجموع</th>
+              <th>من أصل</th>
+              <th>الوقت</th>
+              <th>التاريخ</th>
+            </tr>
+          </thead>
+          <tbody id="results-body">
+            <tr>
+              <td colspan="8" class="text-center">جارٍ تحميل النتائج...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <footer class="text-center py-3 bg-light border-top mt-4">
+    <p class="mb-0">الكلية التقنية الهندسية كركوك / تصميم و برمجة : المبرمج مصطفى هاشم قاسم</p>
+  </footer>
+
+  <script src="admin.js"></script>
+</body>
+</html>
