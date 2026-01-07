@@ -5,7 +5,7 @@
 
 // ============== الإعدادات ==============
 // const API_BASE = 'http://localhost:3000';
-const API_BASE ='https://quiz-project.up.railway.app/api/save-result';
+const API_BASE ='https://quiz-project.up.railway.app';
 let results = [];
 
 // ============== التهيئة عند تحميل الصفحة ==============
